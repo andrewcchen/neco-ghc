@@ -18,11 +18,10 @@ let s:pragmas = [
       \ 'WARNING',
       \ ]
 
-" todo: channel support
-let s:is_async = has('nvim')
-" let s:is_async = has('nvim') || (has('job') && has('channel')
-"         \                && exists('*job_getchannel')
-"         \                && exists('*job_info'))
+" let s:is_async = has('nvim')
+let s:is_async = has('nvim') || (has('job') && has('channel')
+        \                && exists('*job_getchannel')
+        \                && exists('*job_info'))
 let s:job_info = {}
 let s:max_processes = 5
 
